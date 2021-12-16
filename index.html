@@ -1,0 +1,131 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title> Turtlebot Search & Rescue</title>
+    <link rel="shortcut icon" href="assets/dog.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Turtlebot Search & Rescue </title>
+    <link href="stylesheet.css" rel="stylesheet">
+    <!-- Development version -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </head>
+
+
+
+  <body>
+
+    <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    <div class="container">
+        <div>
+          <div id="main" class="row">
+            <div class="col-md-12">
+            <ul>
+              <li class="active"><a href="#home_scroll">Home</a></li>
+              <li><a href="#vs">Vision Statement</a></li>
+              <li><a href="#process">Process</a></li>
+              <li><a href="#rtitle">Requirements, Testing & Hazards</a></li>
+              <li><a href="#howTouse">How to Use</a></li>
+              <li><a href="#testing">Architectural Diagram</a></li>
+              <li><a href="#testing">Testing</a></li>
+            </ul>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+            <h1> Turtlebot Search & Rescue </h1>
+            <div class = "dog-Title">
+
+              <div class="w3-content w3-display-container">
+                <img class="mySlides" src="assets/tb1.png" style="width:100%">
+                <img class="mySlides" src="assets/tb2.png" style="width:100%">
+              </div>
+
+            <h2>Watch a Demo</h2>
+            <div class="video-c">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/9_8U_OZ096g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <br>
+          </div>
+          <div id="vs" class="row" style="margin-top: 20px;">
+            <h1 class="text2"> Vision Statement </h1>
+            <p id="description">Search and Rescue uses a UGV, specifically a turtlebot, to search and rescue its fellow companion. 
+              The point of our project is to simulate a real world search and rescue operation. While one turtlebot is exploring its terrain,
+               it gets losts and sends a rescue signal for help. To better simulate a real world operation, the sent location of the turtlebot 
+               in distress is “scrambled” to an area with a certain radius. A second turtlebot will receive this scrambled signal and make its 
+               way to the general area to rescue it. After scouting the area and finding the lost turtlebot, it will rescue it and lead it back to its homebase.
+            </p>
+        </div>
+        <div id="process" class="row" style="margin-top: 0px;">
+          <h1 class="text2"> Process </h1>
+          <p id="description"> In the beginning stages of our project, we used the Kanban Board on Trello to plan the tasks that were to be completed 
+            and any sort of fixes that were to be made. Our main tasks were completed sequentially with out group: 
+            1. Enviroment set up - making sure all the packages were working and all dependencies were installed 
+            2. Define the Map - this involved figuring out what the space would look like where the dogbot would get "lost" 
+            2. Modify the Navigator class - fixed bugs from before and updated it to reflect changes made in main
+            3. Unit tests - for Navigator class 
+            4. Update main code with new Navigator class 
+            5. Test turtlebot/dogbot/RADAR functionality 
+                A. Have dogbot get "lost"
+                B. Run 2 turtlebots at the same time
+                C. Get turtlebots to follow each other 
+      </div>
+      <div id="howTouse" class="row" style="margin-top: 0px;">
+        <h1 class="text2">How it works?</h1>
+      </div>
+      <p> Check out the documentation at our GitHub page: <a href="https://github.com/SAREC-Lab/CAR-BLUE1">Click here</a></p>
+        <div id="rtitle" class="row" style="margin-top: 0px;">
+          <h1 class="text2"> Requirements and Hazards </h1>
+          <p id="description">
+          Per the Requirements:
+          1. Our dogbot will wandering off to a "randomized" location
+          2. The second turtlebot, RADAR should search for the dogbot
+          3. Once that turtlebot is found, it should follow the "rescuer" turtlebot 
+             back to the intial location.
+
+          Given these requirements, the main hazards included:
+          1. Potential collision of two turtlebots
+          2. Dogbot would not sense the RADAR turtlebot, therefore remaining "lost" 
+          3. Namespace issues and running packages incorrectly would prohibit
+            turtlebots from  moving at the same time
+          </p>
+        </div>
+        <div id="testing" class="row" style="margin-top: 0px">
+          <h1 class="text2"> Architecture and Testing </h1>
+          <p id="description"> Most of our testing was done in our unit tests from our navigator class. From that point forward, 
+           testing was limited to the turtlebot's functionality in following the other turtle bot. As for our Architecture, it is shown below:
+          </p>
+          <img src="assets/sys.png" class="img-fluid" alt="Responsive image">
+        </div>
+      </div>
+      </div>
+    </div>
+    </div >
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
