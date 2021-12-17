@@ -113,8 +113,13 @@
         </div>
         <div id="testing" class="row" style="margin-top: 0px">
           <h1 class="text2"> Architecture and Testing </h1>
-          <p id="description"> Most of our testing was done in our unit tests from our navigator class. From that point forward, 
-           testing was limited to the turtlebot's functionality in following the other turtle bot. As for our Architecture, it is shown below:
+          <p id="description"> Most of our testing was done through acceptance testing. Because most of our commands were packages (autonomous navigation and follower), 
+            they had existing unit and integration tests that were thoroughly tested. Additionally, because our functions would not work unless a Turtlebot was already successfully
+            connected (otherwise they would throw errors), our unit tests really tested our own functions (mostly OS commands). As a whole, we focused more thoroughly on 
+            acceptance tests. For us, this meant multiple checks in the code for any errors along the way that would result in an error message and an exit command. This 
+            also meant simplifying the room for error the user experiences: instead of running multiple commands in multiple terminals, we stored all those commands in our 
+            python code as OS commands to run the packages. We executed our code in multiple mazes and setups in multiple circumstances. In the future, to more thoroughly 
+            test our code, we could implement mock objects in the form of certain classes to have further tests. As for our Architecture, it is shown below:
           </p>
           <img src="assets/sys.png" class="img-fluid" alt="Responsive image">
         </div>
